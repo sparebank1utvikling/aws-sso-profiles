@@ -1,4 +1,4 @@
-module github.com/chlunde/aws-sso/profiles
+module github.com/sparebank1utvikling/aws-sso/profiles
 
 go 1.17
 
