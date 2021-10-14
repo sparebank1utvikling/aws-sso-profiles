@@ -19,9 +19,9 @@ func Test_profileName(t *testing.T) {
 		args args
 		want string
 	}{
-		{name: "HappyCase", args: args{accountName: "app-account", roleName: "admin-profile"}, want: "app-account-admin-profile"},
-		{name: "CapsToLowercase", args: args{accountName: "App-Account", roleName: "aDmin-profile"}, want: "app-account-admin-profile"},
-		{name: "ReplaceChars", args: args{accountName: "app account/2", roleName: " admin-profile"}, want: "app-account-2--admin-profile"},
+		{name: "HappyCase", args: args{accountName: "app-account", roleName: "admin-profile"}, want: "app-account/admin-profile"},
+		{name: "CapsToLowercase", args: args{accountName: "App-Account", roleName: "aDmin-profile"}, want: "app-account/admin-profile"},
+		{name: "ReplaceChars", args: args{accountName: "app account.2", roleName: " admin-profile"}, want: "app-account-2/admin-profile"},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
