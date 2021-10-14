@@ -133,8 +133,8 @@ func listSSOProfiles(ssoSession CacheFile) ([]Profile, error) {
 }
 
 func profileName(accountName, roleName string) string {
-	combined := fmt.Sprintf("%s-%s", accountName, roleName)
-	return strings.ToLower(regexp.MustCompile("[^a-zA-Z0-9-]").ReplaceAllString(combined, "-"))
+	combined := fmt.Sprintf("%s/%s", strings.TrimSpace(accountName), strings.TrimSpace(roleName))
+	return strings.ToLower(regexp.MustCompile("[^a-zA-Z0-9-/]").ReplaceAllString(combined, "-"))
 }
 
 type Profile struct {
