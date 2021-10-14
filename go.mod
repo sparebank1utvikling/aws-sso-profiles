@@ -15,4 +15,5 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/internal/presigned-url v1.3.0 // indirect
 	github.com/aws/aws-sdk-go-v2/service/sts v1.7.0 // indirect
 	github.com/aws/smithy-go v1.8.0 // indirect
+	gopkg.in/ini.v1 v1.63.2 // indirect
 )
